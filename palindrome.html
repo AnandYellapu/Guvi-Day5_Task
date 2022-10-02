@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //* Array is palindrome using iife *// 
+(function(arr) {
+    var len=arr.length;
+    for(var i=0;i<len/2;i++) {
+        if(arr[i] !=arr[len-1-i]){
+            return "It is not a palindrome";
+        }
+    }
+    console.log([arr + " " +"is a palindrome"]);
+})([1,2,3,2,1]);
+
+
+//* palindrome in array using anonymous function *//
+
+var palindrome=function(arr) {
+    var len=arr.length;
+    for(var i=0;i<len/2;i++) {
+        if(arr[i] !=arr[len-1-i]){
+            return "It is not a palindrome";
+        }
+    }
+    console.log([arr + " " +" is a palindrome"]);
+}
+palindrome([4,5,6,5,4])
+ </script>
+</body>
+</html>

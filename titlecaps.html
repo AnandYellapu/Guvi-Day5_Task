@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //* b.converting string to title caps using iife function *//       
+       (function(){
+        let str=("being myself".toLowerCase().split(" "));
+        for (let i= 0; i < str.length;i++) {
+            str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+        }
+        console.log(str.join(" "));
+       })();
+
+
+
+    //* converting string to title caps using anonymous function *//
+    let str2=function(str3) {
+        let arr=[];
+        str3=str3.toLowerCase().split(" ");
+        for(i=0;i<str3.length;i++)
+        {
+            arr.push(str3[i].charAt(0).toUpperCase() + str3[i].slice(1));
+        }
+        return console.log(...arr);
+        };
+        (str2("being myself"));
+        </script>
+</body>
+</html>
